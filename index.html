@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew House | Coffee Shop</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f8f3eb;
+            color: #2d1b12;
+        }
+
+        header {
+            background: #24140e;
+            color: white;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #d6a36b;
+        }
+
+        .hero {
+            min-height: 550px;
+            background:
+                linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+                url("https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1600");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #bd8150;
+            color: white;
+            padding: 14px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            background: #89552e;
+            transform: scale(1.05);
+        }
+
+        section {
+            padding: 75px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            color: #806b5d;
+            margin-bottom: 35px;
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .coffee-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,.08);
+            transition: .3s;
+        }
+
+        .coffee-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .coffee-card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .coffee-card h3 {
+            margin: 18px 0 10px;
+        }
+
+        .coffee-card p {
+            color: #806b5d;
+            padding: 0 15px;
+        }
+
+        .price {
+            display: block;
+            color: #a45e2b;
+            font-size: 21px;
+            font-weight: bold;
+            margin: 15px;
+        }
+
+        .about {
+            background: #e9ddce;
+        }
+
+        .about p {
+            max-width: 650px;
+            margin: 15px auto;
+            line-height: 1.8;
+        }
+
+        .contact p {
+            margin: 12px;
+        }
+
+        footer {
+            background: #24140e;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        @media(max-width: 600px) {
+            header {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 7px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">☕ BREW HOUSE</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero" id="home">
+        <div>
+            <h1>YOUR DAILY COFFEE FIX.</h1>
+            <p>Fresh coffee. Good vibes. Better mornings.</p>
+            <a href="#menu" class="btn">Explore Our Menu</a>
+        </div>
+    </div>
+
+    <section id="menu">
+        <h2>Our Coffee Menu ☕</h2>
+        <p class="subtitle">Made fresh, served with love.</p>
+
+        <div class="menu">
+
+            <div class="coffee-card">
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600" alt="Espresso">
+                <h3>Espresso</h3>
+                <p>Strong, rich and full of flavour.</p>
+                <span class="price">R25</span>
+            </div>
+
+            <div class="coffee-card">
+                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600" alt="Cappuccino">
+                <h3>Cappuccino</h3>
+                <p>Smooth coffee with creamy foam.</p>
+                <span class="price">R35</span>
+            </div>
+
+            <div class="coffee-card">
+                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600" alt="Latte">
+                <h3>Latte</h3>
+                <p>Perfectly blended coffee and milk.</p>
+                <span class="price">R40</span>
+            </div>
+
+            <div class="coffee-card">
+                <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=600" alt="Iced Coffee">
+                <h3>Iced Coffee</h3>
+                <p>Cold, refreshing and delicious.</p>
+                <span class="price">R38</span>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Brew House</h2>
+        <p>
+            Welcome to Brew House, where every cup tells a story.
+            We believe great coffee brings people together.
+            Whether you're starting your morning or taking a break,
+            we've got the perfect cup waiting for you.
+        </p>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Get In Touch</h2>
+        <p>📍 Cape Town, South Africa</p>
+        <p>📧 Email: hello@brewhouse.co.za</p>
+        <p>☕ Come grab your favourite coffee!</p>
+    </section>
+
+    <footer>
+        <p>© 2026 Brew House. All rights reserved.</p>
+        <p>Made with ☕ and passion.</p>
+    </footer>
+
+</body>
+</html>
